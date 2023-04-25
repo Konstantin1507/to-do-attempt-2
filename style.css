@@ -1,0 +1,253 @@
+﻿*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font: 14px Arial, sans-serif;
+  line-height: 1.4em;
+  background: #f5f5f5;
+  color: #4d4d4d;
+  min-width: 230px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#root {
+  margin: 130px 0 40px 0;
+  position: relative;
+}
+
+.header {
+  position: absolute;
+  top: -145px;
+  width: 100%;
+  font-size: 100px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
+
+#main {
+  display: block;
+  background: #fff;
+  margin: 130px 0 40px 0;
+  position: relative;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+}
+
+#todoInputHolder {
+  position: relative;
+  padding-left: 60px;
+}
+
+.inputLabel {
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  color: rgba(175, 47, 47, 0.3);
+  font-weight: 800;
+  border: 1.5px solid transparent;
+}
+
+.all-checked {
+  color: rgba(175, 47, 47, 0.8);
+}
+
+.todo-validate-input {
+  width: 100%;
+  padding: 16px 16px 16px 0px;
+  color: inherit;
+  font-size: 24px;
+  line-height: 1;
+  font-family: inherit;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0, 0, 0, 0.03);
+  position: relative;
+}
+
+.todo-validate-input::placeholder {
+  /* position: absolute;
+  top: 10px; */
+  font-size: 24px;
+  font-family: inherit;
+  font-style: italic;
+  color: #cc9a9a;
+  opacity: 0.5;
+}
+
+.todo-validate-input:focus {
+  outline: none;
+}
+
+#listElem {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.listElem-li {
+  position: relative;
+  font-size: 24px;
+  border-bottom: 1px solid #ededed;
+}
+
+.listElem-div {
+  position: relative;
+  padding: 0px 15px 0px 60px;
+  display: block;
+  transition: color 0.4s;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border: 1.5px solid rgba(175, 47, 47, 0.25);
+  border-radius: 50%;
+  color: transparent;
+}
+
+.label-checked {
+  text-align: center;
+  padding-top: 5px;
+  color: rgb(62, 211, 164);
+}
+
+.task {
+  line-height: 2;
+  display: inline-block;
+  white-space: normal;
+  width: 100%;
+  overflow-wrap: break-word;
+}
+
+.task-focus {
+  background-color: aqua;
+  overflow-x: hidden;
+  white-space: nowrap;
+  z-index: 5;
+}
+
+.delete {
+  position: absolute;
+  /* top: 0; */
+  right: 10px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  margin: auto 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #cc9a9a;
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+.showX {
+  opacity: 0.5;
+  transition: all 0.3s ease-out;
+}
+.showXFull {
+  opacity: 1;
+  transition: all 0.3s ease-out;
+}
+
+.activeButton {
+  border: 1px solid rgba(175, 47, 47, 0.5);
+  transition: all 0.3s ease-out;
+}
+
+.done {
+  text-decoration: line-through;
+  color: grey;
+  opacity: 0.5;
+}
+
+.none {
+  display: none;
+}
+
+.input {
+  width: 100%;
+  margin: 0;
+  padding: 16px 16px 16px 60px;
+  border: none;
+}
+
+.control {
+  padding: 0 5px 0 5px;
+  display: flex;
+  color: #777;
+  padding: 20px 15px;
+  height: 20px;
+  text-align: center;
+  border-top: 1px solid #e6e6e6;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+#buttons {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+  align-content: space-around;
+  align-items: center;
+}
+
+button {
+  background-color: inherit;
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.control-button:hover {
+  border: 1px solid rgba(175, 47, 47, 0.25);
+  transition: all 0.2s ease-out;
+}
+
+#clearCompletedDiv {
+  width: 120px;
+}
+
+#clearCompleted:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  margin: 65px auto 0;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-align: center;
+}
